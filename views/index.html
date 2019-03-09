@@ -45,10 +45,10 @@
                 <tr>
                     <td>
                         <table border="0" cellpadding="0" cellspacing="0" class="itemlist">
-                            <% for (var i = 0; i < list.length; i++) {%>
+                            {{each list v i}}
                                 <tr class="athing" id="13718752">
                                     <td align="right" valign="top" class="title">
-                                        <span class="rank">1.</span>
+                                        <span class="rank">{{i+1}}.</span>
                                     </td>
                                     <td valign="top" class="votelinks">
                                         <center>
@@ -59,9 +59,9 @@
                                     </td>
                                     <td class="title">
                                         <a href="/details?id=<%= list[i].id %>">
-                                            <%= list[i].title %>
+                                           {{v.title}}
                                         </a>
-                                        <span class="sitebit comhead"> (<a href="from?site=chromium.org"><span class="sitestr">chromium.org</span></a>)</span>
+                                        <span class="sitebit comhead"> (<a href="from?site={{v.url}}"><span class="sitestr">{{v.url}}</span></a>)</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -74,7 +74,10 @@
                                     </td>
                                 </tr>
                                 <tr class="spacer" style="height:5px"></tr>
-                                <% } %>
+
+
+
+                                {{/each}}
                                     <!-- 最后一行之后还有一个More -->
                                     <tr class="morespace" style="height:10px"></tr>
                                     <tr>

@@ -1,15 +1,15 @@
 {
-  "name": "04-HackerNews",
+  "name": "hackernews",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "art-template": "^4.12.2",
     "mime": "^2.3.1"
   }
 }
